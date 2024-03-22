@@ -7,6 +7,7 @@
   }
 */
 const checkSchemeId = (req, res, next) => {
+  const {} = req.params; 
 
 }
 
