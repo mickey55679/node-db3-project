@@ -82,7 +82,7 @@ order by st.step_number;
       ]
   */
  const rows = await db('schemes as sc')
-.leftJoin('steps as st', 'sc.scheme_id', 'sc.scheme_id')
+.leftJoin('steps as st', 'sc.scheme_id', 'st.scheme_id')
 .select('st.step_id', 'st.step_number', 'instructions', 'sc.scheme_name')
 .where('sc.scheme_id', scheme_id)
 .orderBy('step_number')
